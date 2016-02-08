@@ -36,3 +36,5 @@ Su éxito se basa en el hecho de que, al ser libre, está disponible desde much�
 [Arduino](./Arduino.md)
 
 [Bitbloq](./Bitbloq.md)
+
+[Presentaciones](./presentaciones)
