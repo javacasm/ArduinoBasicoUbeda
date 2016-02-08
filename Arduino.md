@@ -25,7 +25,6 @@ Si hay un producto que puede representar el boom de la irrupción de la tecnolog
 
 ![pinout](imagenes/Arduino_Uno_pinout.png)
 
-
 ## [¿qué es arduino?](./presentaciones/%200.0%20-%20Introducci%C3%B3n%20a%20Arduino.pdf)
 
 * * *
@@ -34,7 +33,17 @@ Si hay un producto que puede representar el boom de la irrupción de la tecnolog
 
 * ### Programa
 
-* ### Montaje ([electŕonica](./presentaciones/4.0%20-%20Introducci%C3%B3n%20a%20la%20electr%C3%B3nica.pdf))
+* ### Montaje ([electrónica](./presentaciones/4.0%20-%20Introducci%C3%B3n%20a%20la%20electr%C3%B3nica.pdf))
+
+### ¿Qué es un programa? un conjunto de instrucciones ordenadas
+
+#### Programa parpadeo (blink)
+
+* Encendemos
+* Esperamos
+* Apagamos
+* Esperamos
+* Volvemos al principio
 
 #### (descargar el programa en la placa)
 
