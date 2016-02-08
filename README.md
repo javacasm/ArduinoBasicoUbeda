@@ -8,9 +8,6 @@ José Antonio Vacas @javacasm
 
 ![cc](./imagenes/CCbySQ_88x31.png)
 
-[Arduino](./Arduino.md)
-
-[Bitbloq](./Bitbloq.md)
 
 
 ## JUSTIFICACIÓN
@@ -34,3 +31,8 @@ Su éxito se basa en el hecho de que, al ser libre, está disponible desde much�
 * Asimilar conceptos necesarios para hacer programas de control de la  plataforma Arduino
 * Poder crear programas de control de la plataforma.
 * Ser capaces de realizar funciones de almacenamiento y comunicación con la misma Aprender a crear proyectos propios usando Arduino.
+
+
+[Arduino](./Arduino.md)
+
+[Bitbloq](./Bitbloq.md)
