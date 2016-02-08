@@ -11,16 +11,16 @@
 ![CCbySA](imagenes/CCbySQ_88x31.png)
 
 
-# Programando con Bitbloq
+# Programando con [Bitbloq](http://bitbloq.bq.com)
 
 ### http://bitbloq.bq.com
-
 
 Bitbloq es un entorno de programación visual que nos permite hacer pogramas para Arduino sin tener conocimientos de programación.
 
 Un programa estará formado un conjunto de bloques que encajan entre sí.
 
 Los bloques están agrupados en familias, cada una de ellas con un color concreto.
+
 # Minicurso Bitbloq
 
 Bitbloq es un entorno de programación visual que nos permite crear programas para Arduino y placas compatibles y transferir los mismos a las placas de una forma sencilla.
@@ -34,9 +34,14 @@ A lo largo de estos vídeos veremos algunas de sus características más importa
 
 ## Introducción a la programacion con bitbloq:
 
-[[vídeo]](https://youtu.be/rOdMRhhQTUs) [[ejemplo Parpadeo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/blob/master/bitbloq/1.%20parpadeo.json)
+[[vídeo]](https://youtu.be/rOdMRhhQTUs) [[ejemplo
+Parpadeo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/blob/master/bitbloq/1.%20parpadeo.json)
 
 ![parpadeo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/1%20parpadeo.png)
+
+### Usaremos el led interno
+
+![blink](imagenes/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
 
 Bitbloq es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
 
@@ -44,6 +49,40 @@ Además nos permite programar nuestro arduino sin instalar (practicamente) nada 
 
 Empezaremos seleccionando el tipo de placa Arduino que vamos a usar y a continuación añadiremos el hardware que usemos conectándolo a las patillas correspondientes.
 
+#### Ejercicio: Cambiar la velocidad de parpadeo
+
+* * *
+
+## Con led externo
+
+### Montaje sencillo
+![led externo](imagenes/ExampleCircuit_bb.png)
+
+[detalle led](imagenes/300px-LED.png)
+
+* * *
+### Montaje con placa prototipo
+![led placa](imagenes/led13bb.jpg)
+
+[¿cómo funciona una placa prototipo?](imagenes/breadboard1.gif)
+
+#### Ejercicio: Cambiar el pin utilizado al pin 2
+
+* * *
+
+### Esquema eléctrico
+
+![led externo](imagenes/ExampleCircuit_sch.png)
+
+* * *
+
+## Con un relé usaremos ¡¡grandes corrientes eléctricas!!
+
+![rele](imagenes/relee_arduino.jpg)
+
+![Danger](imagenes/Dangers-of-electric-shock.jpg)
+
+* * *
 
 ### Ver código C++ de un programa bitbloq:  
 [[video]](https://youtu.be/cg1YNVSprdo)
@@ -61,6 +100,91 @@ Para aprender las funciones de pin en bitbloq
 [[vídeo]](http://youtu.be/zKs0-vwoxMM)
 
 Las funciones de pin son las distintas formas que tenemos de manejar los pines de arduino. Tenemos las mismas sentencias que en arduino (en el menú Funciones de Pin): DigitalWrite, AnalogWrite, DigitalRead y AnalogRead. También podemos usarlas si utilizamos un bloque ZUM o octopus correspondiente. ????
+
+#### Ejercicio: Cambiar al pin del esquema
+
+* * *
+## Veamos un poco de código
+
+	void setup()  				// Función de configuración
+	{
+	  pinMode(13,OUTPUT);  		// Vamos a usar una salida
+	}
+
+
+	void loop()  // Función de bucle. Se repite por siempre
+	{
+	  digitalWrite(13,HIGH);  	// Activamos la salida 13
+	  delay(1000);				// Esperamos
+	  digitalWrite(13,LOW);		// Desativamos la salida 13
+	  delay(1000);				// Esperamos
+	}							// Cuando termina se vuelve a llamar
+
+#### Ejercicio: Cambiar al pin del esquema
+#### Ejercicio: Cambiar el pin utilizado al pin 2
+
+* * *
+# Envío de datos serie
+
+### La comunicación serie se produce via USB entre Arduino y el PC
+
+* Detectamos el puerto
+* Configuramos la velocidad
+* Necesitamos un programa para ver los datos
+
+## Vamos a enviar "Encendido" y "Apagado" al PC
+![ParpadeoSerie](imagenes/ParpadeoSerie.png)
+
+* * *
+# Escritura de valores analógicos
+
+## Usando técnicas como PWM podemos simular valores intermedios: 0 - 255
+### (sólo en algunos pines ~ )
+
+## Como vamos a hacer que cambie de valor usaremos una variable
+
+![dimmer](imagenes/dimmer-circuit3.png)
+
+![analogWrite](imagenes/AnalogWrite.png)
+
+### Si vemos el código
+
+	void setup()						// configuracion
+	{
+	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
+	  Serial.begin(9600);				// Configuramos la conexión con el PC
+	}
+
+	void loop()
+	{
+	  int valorSalida=0;				// la variable valorSalida empieza en 0
+	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
+	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
+	    Serial.println(valorSalida);	// Enviamos al pc la variable
+	    delay(100);						// Esperamos 0,1 segundos
+	   }
+
+	}
+
+* * *
+# Led RGB
+## 3 leds (Red,Green,Blue) con una de las patillas común
+
+## Positivo (Ánodo) Común
+
+![LedRGBPcomun](imagenes/LedRGBPcomun.jpg)
+
+## Negativo (Cátodo) Común
+
+![LedRGBNcomun](imagenes/LedRGBNComun.png)
+
+## Tiras de leds: Necesitamos más potencia por lo que usaremos un transistor como amplificador.
+
+### El montaje es sencillo
+
+![ledstripbjt](imagenes/ledstripbjt.gif)
+
+
 
 ## Sentencias de control
 
@@ -109,7 +233,8 @@ Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque i
 ![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
 ### Condicionales complejas
-[[vídeo]](http://youtu.be/en_Y-_wVyO0) [[ejemplo]](./ejemplosBitbloq/condiciones_if.xml)
+[[vídeo](http://youtu.be/en_Y-_wVyO0)]
+[][ejemplo](./ejemplosBitbloq/condiciones_if.xml)]
 
 ![Condiciones_lógicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
