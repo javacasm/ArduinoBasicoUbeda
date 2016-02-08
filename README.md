@@ -2,7 +2,7 @@
 
 # CEP de úbeda
 
-## 9 de Febrero y 2 y 10 de Marzo de 2016
+## 9 de Febrero, 2 y 10 de Marzo de 2016
 
 José Antonio Vacas @javacasm
 
