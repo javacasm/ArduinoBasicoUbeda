@@ -33,8 +33,10 @@ Su éxito se basa en el hecho de que, al ser libre, está disponible desde much�
 * Ser capaces de realizar funciones de almacenamiento y comunicación con la misma Aprender a crear proyectos propios usando Arduino.
 
 
-[Arduino](./Arduino.md)
+## [Arduino](./Arduino.md)
 
-[Bitbloq](./Bitbloq.md)
+## [Bitbloq](./Bitbloq.md)
 
-[Presentaciones](./presentaciones)
+## [Presentaciones](./presentaciones)
+
+## [Dónde comprar](./Comprar.md)
