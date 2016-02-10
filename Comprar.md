@@ -24,6 +24,12 @@ José Antonio Vacas @javacasm
 * www.adafruit.com
 * arduino.cc
 
+## Internacionales baratas
+
+* http://www.elecfreaks.com/
+* http://www.electrodragon.com/
+
+
 ## China
 
 * www.dx.com
