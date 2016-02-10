@@ -1,14 +1,13 @@
-# Programar Para Educar
+# ArduinoBasico
 
-## Curso del CEP de Granada
+# CEP de úbeda
 
-## Enero de 2016
+## 9 de Febrero, 2 y 10 de Marzo de 2016
 
-[Calendario](./Indice.md)
+José Antonio Vacas @javacasm
 
-### José Antonio Vacas @javacasm
+![cc](./imagenes/CCbySQ_88x31.png)
 
-![CCbySA](imagenes/CCbySQ_88x31.png)
 
 # Arduino
 
