@@ -17,7 +17,7 @@ Si hay un producto que puede representar el boom de la irrupción de la tecnolog
 
 ![arduino](imagenes/Arduino_Uno_-_R3.jpg)
 
-[más detalle](imagenes/ArduinoUno_R3_Front.jpg)
+[más detalle](imagenes/arduino_uno_partes.jpg)
 
 ## Así es internamente
 #### (mucho por descubrir)
@@ -45,6 +45,17 @@ Si hay un producto que puede representar el boom de la irrupción de la tecnolog
 * Volvemos al principio
 
 #### (descargar el programa en la placa)
+
+#### Instalación de Bitbloq
+
+1. Se recomienda usar chrome, para que funcione al 100%. Podemos descargarlos desde [aquí](http://chrome.google.com). Para instalar la versión adecuada necesitamos saber si nuestro sistema operativo es de 32 o de 64 bits
+
+![insta](./imagenes/InstalacionChrome.png)
+
+2. Una vez que tengamos nuestro programa  y pulsamos el icono de la flecha para descargar el programa a Arduino. Para instalar la versión adecuada necesitamos saber si nuestro sistema operativo es de 32 o de 64 bits
+
+![install](http://zowi.bq.com/wp-content/uploads/2016/01/Bitbloq-I-Hello-World-English-Pic-08.jpg)
+
 
 #### [Instalación del IDE de arduino](http://www.slideshare.net/javacasm/32-instalacin-del-ide)
 
