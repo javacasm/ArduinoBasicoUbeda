@@ -132,64 +132,52 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 * Necesitamos un programa para ver los datos
 
 ## Vamos a enviar "Encendido" y "Apagado" al PC
-![ParpadeoSerie](imagenes/ParpadeoSerie.png)
+
+Para enviar datos al PC necesitamos añadir el componente "Puerto Serie"
+
+![HardwareSerie](./imagenes/HardwareSerie.png)
+
+Una vez añadido tendremos acceso a las funciones de comunicaciones. Podremos enviar cualquier contenido (variables, texto, etc...)
+
+![SoftwareSerie.png](./imagenes/SoftwareSerie.png)
+
+Podremos ver estos valores por el "Monitor Serie"
 
 * * *
-# Escritura de valores analógicos
-
-## Usando técnicas como PWM podemos simular valores intermedios: 0 - 255
-### (sólo en algunos pines ~ )
-
-## Como vamos a hacer que cambie de valor usaremos una variable
-
-![dimmer](imagenes/dimmer-circuit3.png)
-
-![analogWrite](imagenes/AnalogWrite.png)
-
-### Si vemos el código
-
-	void setup()						// configuracion
-	{
-	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
-	  Serial.begin(9600);				// Configuramos la conexión con el PC
-	}
-
-	void loop()
-	{
-	  int valorSalida=0;				// la variable valorSalida empieza en 0
-	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
-	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
-	    Serial.println(valorSalida);	// Enviamos al pc la variable
-	    delay(100);						// Esperamos 0,1 segundos
-	   }
-
-	}
-
-* * *
-# Led RGB
-## 3 leds (Red,Green,Blue) con una de las patillas común
-
-## Positivo (Ánodo) Común
-
-![LedRGBPcomun](imagenes/LedRGBPcomun.jpg)
-
-## Negativo (Cátodo) Común
-
-![LedRGBNcomun](imagenes/LedRGBNComun.png)
-
-## Tiras de leds: Necesitamos más potencia por lo que usaremos un transistor como amplificador.
-
-### El montaje es sencillo
-
-![ledstripbjt](imagenes/ledstripbjt.gif)
-
-
 
 ## Sentencias de control
 
 [[video]](https://youtu.be/dakh7MTxpBg)
 
 Las sentencias de control son aquellas que nos permite modificar el orden o el modo en el que se ejecutan los bloques de nuestro programa
+
+## Leer valores analógicos
+
+Cuando añadimos un sensor analógico podemos leer su valor con un nuevo componente
+
+![pot](./imagenes/Potenciometro.png)
+
+Podremos utilizar ese valor que estará entre 0 y 1023
+
+Su código:
+
+	int led10 = 10;
+	int potenciometro = A0;
+
+	void setup() {
+	    pinMode(led10, OUTPUT);
+	    Serial.begin(9600);
+	}
+
+	void loop() {
+	    digitalWrite(led10, HIGH);
+	    Serial.println("Encendido");
+	    delay(analogRead(potenciometro));
+	    digitalWrite(led10, LOW);
+	    Serial.println("Apagado");
+	    delay(analogRead(potenciometro));
+	}
+
 
 ### Variables
 
@@ -245,6 +233,55 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 
 * Con que se cumpla una de elllas se dará por válida toda la condición
 
+* * *
+# Escritura de valores analógicos
+
+## Usando técnicas como PWM podemos simular valores intermedios: 0 - 255
+### (sólo en algunos pines ~ )
+
+## Como vamos a hacer que cambie de valor usaremos una variable
+
+![dimmer](imagenes/dimmer-circuit3.png)
+
+![analogWrite](imagenes/SalidaAnalogica.png)
+
+### Si vemos el código
+
+	void setup()						// configuracion
+	{
+	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
+	  Serial.begin(9600);				// Configuramos la conexión con el PC
+	}
+
+	void loop()
+	{
+	  int valorSalida=0;				// la variable valorSalida empieza en 0
+	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
+	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
+	    Serial.println(valorSalida);	// Enviamos al pc la variable
+	    delay(100);						// Esperamos 0,1 segundos
+	   }
+
+	}
+
+* * *
+# Led RGB
+## 3 leds (Red,Green,Blue) con una de las patillas común
+
+## Positivo (Ánodo) Común
+
+![LedRGBPcomun](imagenes/LedRGBPcomun.jpg)
+
+## Negativo (Cátodo) Común
+
+![LedRGBNcomun](imagenes/LedRGBNComun.png)
+
+## Tiras de leds: Necesitamos más potencia por lo que usaremos un transistor como amplificador.
+
+### El montaje es sencillo
+
+![ledstripbjt](imagenes/ledstripbjt.gif)
+
 
 ## Envío de datos al PC:
 [[vídeo]](https://youtu.be/hy9t76RLeBU) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.json)
@@ -252,6 +289,12 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 ![serial](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.png)
 
 Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de comunicaciones. Usaremos print para enviar algo (puede ser el valor de una variable o un texto) al pc o println para enviar y pasar a la siguiente línea.
+
+## Entradas analógicas
+
+[[video]](https://youtu.be/nChCA1Qc0uo)[[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.json)
+
+![entradasanalogicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.png)
 
 ## Variables locales vs Variables globales
 
@@ -282,15 +325,6 @@ En bitbloq existen 2 formas de generar sonidos
 
 ![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/sonido.png) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/sonido.json)
 
-## ¿¿¿¿¿ Librerías ????
-
-En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual.
-
-### Servo
-
-![imagen](./ejemplosBitbloq/Servo.png) [[ejemplo]](./ejemplosBitbloq/Servo.xml)
-
-Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
 
 
 ## Entradas y salidas digitales
@@ -314,14 +348,12 @@ Veamos ahora como activar un led al pulsar un botón. Para ello añadiremos un b
 
 ![entradasanalogicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.png)
 
-Veamos como leer las entradas digitales
+## Servos
 
+Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
 
+![HardwareServo.png](./imagenes/HardwareServo.png)
 
-## ¿¿¿¿ Salidas analógicas (PWM) ????
-
-
-![imagen](./ejemplosBitbloq/Salida_Analogica.png) [[ejemplo]](./ejemplosBitbloq/Salida_Analogica.xml)
-
+![SoftwareServo.png](./imagenes/SoftwareServo.png)
 
 Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq-2/)
