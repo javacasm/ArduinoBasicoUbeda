@@ -123,6 +123,13 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 #### Ejercicio: Cambiar el pin utilizado al pin 2
 
 * * *
+
+## Kit te necesito!!!
+
+#### Vamos a hacer un conjunto de Leds tipo Kit
+![simple_cylon.jpg](./imagenes/simple_cylon.jpg)
+
+* * *
 # Envío de datos serie
 
 ### La comunicación serie se produce via USB entre Arduino y el PC
