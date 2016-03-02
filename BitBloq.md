@@ -199,6 +199,10 @@ Su código:
 
 ![kitvariable](./imagenes/SoftwareKitVariable.png)
 
+## Discoteca
+
+![discoteca](./imagenes/SoftwareDiscoteca.png)
+
 ### Variables
 
 Para utilizar las sentencias de control necesitaremos el concepto de variables: que no es otra cosa que un lugar donde almacenar un valor que puede se modificar si así lo queremos
