@@ -13,16 +13,16 @@ José Antonio Vacas @javacasm
 
 ## España
 
-* www.electan.com
-* www.bricogeek.com
-* www.cooking-hacks.com
-* Bq.com
+* http://www.electan.com
+* http://www.bricogeek.com
+* http://www.cooking-hacks.com
+* http://www.Bq.com
 
 ## Internacional
 
-* www.sparkfun.com
-* www.adafruit.com
-* arduino.cc
+* http://www.sparkfun.com
+* http://www.adafruit.com
+* http://arduino.cc
 
 ## Internacionales baratas
 
@@ -32,6 +32,6 @@ José Antonio Vacas @javacasm
 
 ## China
 
-* www.dx.com
-* www.aliexpress.com
-* www.ebay.com
+* http://www.dx.com
+* http://www.aliexpress.com
+* http://www.ebay.com
