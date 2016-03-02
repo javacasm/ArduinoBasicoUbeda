@@ -214,6 +214,11 @@ Con las variables podemos realizar operaciones matemáticas
 El bucle **for** permite repetir un conjunto de pasos un número de veces determinado.
 Necesitamos  declarar una variables que actuará como contador y definir el valor inicial que tendrá la variable y el final, realizándose tantos como pasos como valores enteros haya entre ambas.
 
+
+¡¡Ahora podemos hacer nuestro kit más sencillo!!
+
+![SoftwareKitBucle.png ](./imagenes/SoftwareKitBucle.png )
+
 ### Bucle **while**
 [[vídeo]](https://youtu.be/RVcaaz1NYjk) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20while.json)
 
@@ -233,6 +238,8 @@ Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque i
 [[video]](https://youtu.be/-f_htl5TQN8)[[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicional%20compleja.json)
 
 ![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
+
+
 
 ### Condicionales complejas
 [[vídeo](http://youtu.be/en_Y-_wVyO0)]
