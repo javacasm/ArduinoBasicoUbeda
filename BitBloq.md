@@ -127,7 +127,15 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 ## Kit te necesito!!!
 
 #### Vamos a hacer un conjunto de Leds tipo Kit
+
+![HardwareKit.png](./imagenes/HardwareKit.png)
+
+### Montaje de la electrónica
+
 ![simple_cylon.jpg](./imagenes/simple_cylon.jpg)
+
+![SoftwareKit.png](./imagenes/SoftwareKit.png)
+
 
 * * *
 # Envío de datos serie
