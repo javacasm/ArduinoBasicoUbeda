@@ -193,6 +193,9 @@ Su código:
 	    delay(analogRead(potenciometro));
 	}
 
+## Kit variable
+![pot](https://raw.githubusercontent.com/javacasm/ArduinoIntermedio/master/images/KitPotenciometro.png)
+
 
 ### Variables
 
