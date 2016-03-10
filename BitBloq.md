@@ -296,6 +296,14 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 	}
 
 * * *
+
+# Controlar el brillo de un led con un potenciómetro
+
+![arduino_pot_led.png](./imagenes/arduino_pot_led.png)
+
+![SoftLedPot.png](./imagenes/SoftLedPot.png)
+
+* * *
 # Led RGB
 ## 3 leds (Red,Green,Blue) con una de las patillas común
 
